@@ -1,0 +1,29 @@
+car_0= {'model':'ferrari', 'rang':'qizil'}
+print(car_0['model'])
+print(car_0['rang'])
+
+talaba_0= {'ism':'murod olimov', 'yosh':20, 'fakultet':'informatika'}
+print(talaba_0)
+del talaba_0['yosh']
+print(talaba_0)
+
+
+telefonlar={
+
+print(telefonlar)
+
+phone=telefonlar['ali']
+print(f"Alining telefoni {phone}")
+phone=telefonlar['hasan']
+print(f"Hasanning telefoni {phone}")
+phone=telefonlar.get('hasan', 'bunday ism mavjud emas')
+print(phone)
+
+
+taomlar= {
+    'ali':'osh',
+    'vali':'shurva',
+    'asad':'mastava',
+    'ukam':'qovurma'}
+taom=taomlar['ali']
+print(f"Alining sevimli taomi {taom}")
