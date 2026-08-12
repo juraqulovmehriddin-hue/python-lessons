@@ -1,0 +1,51 @@
+
+python_words={
+    'int':'butun sonlar',
+    'float':'onlik son',
+    'for':'takrorlanish sikli',
+    'and':'malumotni teng kiritish',
+    'or':'taqqoslash'
+    }
+for key, value in sorted(python_words.items()):
+    print(f"{key.title()}-{value}")
+    
+davlatlar={
+    'uzbekistan':'tashkent',
+    'south korea':'seoul',
+    'north korea':'pyongyang',
+    'japan':'tokio',
+    'china':'beijing'
+    }
+
+print("Dunyo davlatlari:")
+for davlat in sorted(davlatlar):
+    print(davlat.upper())
+    
+print("\nDavlatlar poytaxtlari")
+for poytaxt in sorted(davlatlar.values()):
+   print(poytaxt.title())
+    
+country=input("Qaysi davlatning poytaxtini bilishni istaysiz?\n")
+capital=davlatlar.get(country)
+if capital == None:
+    print("Kechirasiz bizda bunday ma'lumot yo'q")
+else:
+    print(f"{country.upper()}ning poytaxti {capital.title()} shahri")    
+
+ovqatlar={
+          'osh': 20000,
+          'shurva': 10000,
+          'manti': 15000,
+          'salat': 10000,
+          'gusht': 20000}
+          }
+print("Uchta taom buyurtma bering")
+buyurtmalar = []
+for n in range(3):
+    buyurtmalar.append(input(f"{n+1}-taom: ").lower())
+
+or buyurtma in buyurtmalar:
+    if buyurtma in ovqatlar:
+        print(f"{buyurtma.title()} {ovqatlar[buyurtma]} so'm")
+    else:
+        print(f"Kechirasiz, bizda {buyurtma} yo'q")
