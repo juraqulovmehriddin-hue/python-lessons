@@ -1,0 +1,81 @@
+forobiy = {'ism': 'Abu Nasr Forobiy',
+           'tyil':873,
+           'vyil':950,
+           'tjoy':'Forob',
+           'asarlar':['Fozil odamlar shahri', 'Katta musiqa kitobi', 'Donolk asoslari']
+           } 
+xorazmiy = {'ism':'Muhammad al- Xorazmiy',
+            'tyil':783,
+            'tjoy':'Xorazm',
+            'asarlar':['al Jabr val-muqobala', 'Kitob surat ul-arz', 'Hind hisobi haqida']
+            }
+ibn_sino = {'ism':'Abu Ali ibn Sino',
+            'tyil':980, 
+            'vyil':1037,
+            'tjoy':'Afshona',
+            'asarlar':['Tib qonulari', 'Kitob ash-shifo', 'Donishnoma']
+            }
+navoiy = {'ism':'Alisher Navoiy',
+          'tyil':1441,
+          'vyil':1501,
+          'tjoy':'Hirot',
+          'asarlar':['Xamsa', 'Lison ut-tayr', 'Mahbub ul-qulub']
+          }
+shaxslar=[forobiy, xorazmiy, ibn_sino, navoiy]
+for shaxs in shaxslar:
+    ism = shaxs ['ism']
+    tyil = shaxs['tyil']
+    tjoy = shaxs ['tjoy']
+    asarlar=shaxs['asarlar']
+    print(f"{ism} {tyil}-yilda {tjoy} da tavallud topgan. "
+          f"{vyil-tyil} umr ko'rgan.")
+    
+print(f"\n{ism}ning mashhur asrlari: ")
+for asar in asarlar: 
+    print(asar)
+
+kinolar = {
+    'ali':['interstellar', 'Rambo', 'spyder man'],
+    'vali':['Qaytish', 'Amerika mojizasi', 'Bomba'],
+    'rayhona':['home alone', "Kelinlar qo'zg'oloni"]
+    }
+for ism, kinolar in kinolar.items():
+    print(f"\n{ism.title()}ning sevimli kinolari: ")
+    for kino in kinolar:
+        print(kino)
+
+davlatlar={
+    'uzbekistan':{'poytaxt':'Toshkent',
+        'Aholisi':39_000_000,
+        'maydoni':448900,
+        'Pul birligi':"so'm"
+        },
+    'russia':{'poytaxt':'Moskva',
+        'Aholisi':132_000_000,
+        'maydoni':17_000_000,
+        'Pul birligi':'Rubl'
+        },
+    'south korea':{'poytaxt':'seul',
+        'Aholisi':52_000_000,
+        'maydoni':100472,
+        'Pul birligi':'von'}
+        }
+for davlat, info in davlatlar.items():
+    if davlat.lower == 'aqsh':
+        davlat = davlat.upper()
+    else:
+        davlat = davlat.capitalize()
+    print(f"\n{davlat}ning poytaxt {info['poytaxt'].title()}"
+          f"\nHududi: {info['maydoni']}kv.km"
+          f"\nAholisi: {info['Aholisi']} kishi"
+          f"\nPul birligi: {info['Pul birligi']}")
+        
+davlat=input("Davlat nomini kiriting: ").lower()
+if davlat in davlatlar:
+    info = davlatlar[davlat]
+    print(f"\n{davlat.capitalize()}ning poytaxt {info['poytaxt'].title()}"
+             f"\nHududi: {info['maydoni']}kv.km"
+             f"\nAholisi: {info['Aholisi']} kishi"
+             f"\nPul birligi: {info['Pul birligi']}")
+else:
+    print("Bizda bunday davlat yo'q.") 
