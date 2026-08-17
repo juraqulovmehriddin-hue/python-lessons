@@ -1,0 +1,38 @@
+#savol="Sevgan kitobingizni kiriting: "
+#savol+="(Barcha kitoblarni kiritib bo'lgach 'exit' deb yozing): "
+while True:
+    kitob=input(savol)
+    if kitob == 'exit':
+        break
+print('Rahmat')
+
+savol = "Yoshingizni kiriting: "
+while True:
+    qiymat=input(savol)
+    if qiymat =='exit' or qiymat=='quit':
+        break
+    yosh=int(qiymat)
+    elif 7<=yosh<18:
+        narx=3000
+    elif 18<=yosh<65:
+        narx=10000
+    else:
+        narx=0
+    if narx==0:
+        print("Sizga chipta bepul")
+    else:
+       print(f"Sizga chipta {narx} so'm")
+
+savol ="Kiritilgan sonning ildizini qaytaruvchi dastur.\n"
+savol += "Musbat son kiriting "
+savol += "(dasturni to'xtatish uchun 'exit' deb yozing): "
+
+while True:
+    qiymat = input(savol)
+    if qiymat=='exit':
+        break
+    elif float (qiymat)<0:
+        continue
+    else:
+        ildiz = float(qiymat)**(0.5)
+        print(f"{qiymat} ning ildizi {ildiz} ga teng")
