@@ -1,0 +1,52 @@
+#foydalanuvchining ismi va yoshini hisoblovchi funksiya
+
+def tyiltop(ism, yosh):
+    print(f"{ism.title()} {2026-yosh} yoshda")
+tyiltop('mehriddin', 2004)
+
+#sonning kvadrati va kubini topuvchi funksiya
+def kv_kub_top(son):
+    """kiritilgan sonning kvadrati va kubini konsolgas chiqaruvchi funksiya"""
+    print(f"{son}ning kvadrati {son**2}ga, sonning kubi {son**3}ga teng")
+   
+kv_kub_top(8)  
+
+#soning juft yoki toqligini aniqlovchi funksiya
+def juft_son(son):
+    """sonning juft yoki toqligini aniqlovchi funksiya"""
+    if son %2:
+        print(f"{son} toq son")
+    else:
+        print(f"{son} juft son")
+juft_son(22)
+juft_son(33)   
+
+
+#sonning katta yoki kichikligini aniqlovchi funksiya
+def katta_kichik(x, y):
+    """sonning katta yoki kichikligini aniqlovchi funksiya"""
+    if x>y:
+        print(f"{x}>{y}")
+    elif x<y:
+        print(f"{x}>{y}")
+    else:
+        print(f"{x}={y}")
+katta_kichik(22,33)
+katta_kichik(33, 44)
+katta_kichik(-10, 112)   
+
+#x ning darajasini chiqaruvchi funksiya 
+def daraja(x,y=2):
+    """sonning darajasini ko'rsatuvchi funksiya"""
+    print(f"{x}ning {y}-darajasi {x**y}ga teng")
+daraja(12,2)
+daraja(14,4)
+daraja(20,6) 
+
+#sonning bo'linish alomatlarini tekshiruvchi funksiya
+
+def bolinish_alomat (son):
+    for n in range(2,11):
+        if not son% n:
+            print(f"{son} {n}ga qoldiqsiz bo'linadi")
+bolinish_alomat(30)
